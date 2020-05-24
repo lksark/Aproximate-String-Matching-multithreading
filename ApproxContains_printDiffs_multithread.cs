@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 
@@ -253,7 +253,7 @@ namespace Edit_Distance_w_Dynamic_Programming
                 {
                     if (i > 0)
                         segmentT_start_index[i] = segmentT_end_index[i - 1] - P.Length + 2;
-                    segmentT_end_index[i] = (int)(T.Length / number_of_program_threads * (i + 1) + P.Length / 2 - 1);
+                    segmentT_end_index[i] = (int)(T.Length / number_of_program_threads * (i + 1) + P.Length - 1);
                 }
                 segmentT_end_index[number_of_program_threads - 1] = T.Length - 1;
 
